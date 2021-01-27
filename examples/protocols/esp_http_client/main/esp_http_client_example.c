@@ -618,7 +618,7 @@ static void http_native_request(void)
         }
         int data_read = esp_http_client_read_response(client, output_buffer, MAX_HTTP_OUTPUT_BUFFER);
         if (data_read >= 0) {
-            ESP_LOGI(TAG, "HTTP GET Status = %d, content_length = %d",
+            ESP_LOGI(TAG, "HTTP POST Status = %d, content_length = %d",
             esp_http_client_get_status_code(client),
             esp_http_client_get_content_length(client));
             ESP_LOG_BUFFER_HEX(TAG, output_buffer, strlen(output_buffer));
